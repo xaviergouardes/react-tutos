@@ -2,6 +2,7 @@ import React from 'react';
 
 import AppBarExampleIcon  from './AppBarExampleIcon';
 import CardExampleWithAvatar from './CardExampleWithAvatar';
+import TabsExampleIconText from './TabsExampleIconText';
 
 /**
  * A simple example of `AppBar` with an icon on the right.
@@ -10,7 +11,9 @@ import CardExampleWithAvatar from './CardExampleWithAvatar';
 const MyApp = () => (
   <div>
     <AppBarExampleIcon />
+        <TabsExampleIconText />
     <CardExampleWithAvatar />
+
   </div>
 );
 
