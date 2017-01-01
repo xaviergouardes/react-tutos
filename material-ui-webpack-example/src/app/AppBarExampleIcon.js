@@ -20,20 +20,28 @@ export default class AppBarExampleIcon extends React.Component {
   render() {
      return (
 
-      <div>
-
         <AppBar
           title="Title"
           iconClassNameRight="muidocs-icon-navigation-expand-more"
-          onTouchTap={this.handleToggle}
-        />
+          onLeftIconButtonTouchTap={this.handleToggle}
+          //onTouchTap={this.handleToggle}
+          //iconElementLeft={<IconButton><NavigationClose /></IconButton>}
+         >
 
-        <Drawer open={this.state.open}>
-          <MenuItem>Menu Item</MenuItem>
-          <MenuItem>Menu Item 2</MenuItem>
-        </Drawer>
 
-      </div>
+          <Drawer open={this.state.open} >
+
+            <MenuItem>Menu Item</MenuItem>
+            <MenuItem
+              onTouchTap={this.handleToggle}
+              >
+                Menu Item 2
+            </MenuItem>
+
+          </Drawer>
+
+        </AppBar>
+
     );
   }
 }
