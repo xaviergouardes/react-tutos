@@ -1,9 +1,16 @@
-import React from 'react';
+import React, { Component } from 'react';
+import { browserHistory } from 'react-router';
 
-const Home = () => (
-  <div>
-    Home
-  </div>
-);
+class Home extends Component {
+
+  render() {
+    return (
+      <h1>
+        Home
+      </h1>
+    );
+  }
+
+}
 
 export default Home;

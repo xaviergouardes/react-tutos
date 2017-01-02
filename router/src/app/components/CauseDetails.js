@@ -1,10 +1,16 @@
-import React from 'react';
+import React, { Component } from 'react';
+import { browserHistory } from 'react-router';
 
+class CauseDetails extends Component {
 
-const CauseDetails = () => (
-  <div>
-    CauseDetails
-  </div>
-);
+  render() {
+    return (
+      <h1>
+        CauseDetails
+      </h1>
+    );
+  }
+
+}
 
 export default CauseDetails;

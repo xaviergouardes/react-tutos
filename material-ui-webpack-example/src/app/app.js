@@ -1,22 +1,18 @@
 import React from 'react';
 import {render} from 'react-dom';
 import injectTapEventPlugin from 'react-tap-event-plugin';
-
-
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 
-import Main from './Main'; // Our custom react component
-import MyApp from './MyApp'; // Our custom react component
+import MyApp from './layouts/MainLayout'; // Our custom react component
 
 
 // Needed for onTouchTap
 // http://stackoverflow.com/a/34015469/988941
 injectTapEventPlugin();
 
-
 const App = () => (
   <MuiThemeProvider>
-    <MyApp />
+    <MainLayout />
   </MuiThemeProvider>
 );
 

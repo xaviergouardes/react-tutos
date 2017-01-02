@@ -21,14 +21,16 @@ injectTapEventPlugin();
 
 
 const MainRouter = () => (
-  <Router history={browserHistory}>
+  <MuiThemeProvider>
+    <Router history={browserHistory}>
 
-    <Route path="/" component={MainLayout}>
-      <Route path="list" component={ListCauses} />
-      <Route path="cause" component={CauseDetails} />
-    </Route>
+      <Route path="/" component={MainLayout}>
+        <Route path="list" component={ListCauses} />
+        <Route path="cause" component={CauseDetails} />
+      </Route>
 
-  </Router>
+    </Router>
+  </MuiThemeProvider>
 );
 
 //render(<App />, document.getElementById('app'));

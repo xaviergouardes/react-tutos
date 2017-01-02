@@ -1,10 +1,16 @@
-import React from 'react';
+import React, { Component } from 'react';
+import { browserHistory } from 'react-router';
 
+class ListCauses extends Component {
 
-const ListCauses = () => (
-  <div>
-    ListCauses
-  </div>
-);
+  render() {
+    return (
+      <h1>
+        ListCauses
+      </h1>
+    );
+  }
+
+}
 
 export default ListCauses;

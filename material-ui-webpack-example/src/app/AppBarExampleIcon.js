@@ -28,7 +28,6 @@ export default class AppBarExampleIcon extends React.Component {
           //iconElementLeft={<IconButton><NavigationClose /></IconButton>}
          >
 
-
           <Drawer open={this.state.open} >
 
             <MenuItem onTouchTap={this.handleToggle}>Menu Item</MenuItem>
