@@ -2,3 +2,4 @@
 
 Ressources internet :
 *  https://css-tricks.com/learning-react-redux/
+*  http://redux.js.org/docs/basics/Actions.html
