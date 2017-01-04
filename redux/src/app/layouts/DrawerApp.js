@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import { browserHistory } from 'react-router';
 
 //material-ui
 import Drawer from 'material-ui/Drawer';
@@ -15,16 +16,19 @@ class DrawerApp extends Component {
 
   constructor(props) {
     super(props);
-    this.handleToggle = this.handleToggle.bind(this);
+    this.handleClick = this.handleClick.bind(this);
   };
 
-  handleToggle = () => this.setState({open: !this.props.open});
+  handleClick = (event, menuItem, index) => {
+      store.dispatch(toogleDrawerAction(this.props.open));
+      browserHistory.push(menuItem.props.path);
+  };
 
   render() {
     return (
 
       <Drawer open={this.props.open} openSecondary={true}>
-          <Menu>
+          <Menu onItemTouchTap={this.handleClick}>
             <MenuItem path="/" >Home</MenuItem>
             <MenuItem path="list">Causes List</MenuItem>
             <MenuItem path="cause">Causes Détail</MenuItem>
@@ -35,18 +39,9 @@ class DrawerApp extends Component {
 
 }
 
-// const mapStateToProps = function(store) {
-//  console.debug('DrawerApp.mapStateToProps() : ' + store.drawerState );
-//  return {
-//    open: store.drawerState.toogle,
-//  };
-//};
-
-// export default connect(mapStateToProps)(DrawerApp);
-
 function mapStateToProps(store) {
-  console.debug('DrawerApp.mapStateToProps() : ' + store.drawerState.open );
+  //console.debug('DrawerApp.mapStateToProps() : ' + store.drawerState.open );
   return { open: store.drawerState.open }
 }
 
-export default connect(mapStateToProps)(DrawerApp);
+export default connect(mapStateToProps, toogleDrawerAction)(DrawerApp);

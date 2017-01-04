@@ -8,16 +8,16 @@ const initialToogleDrawerState = {
 
 const drawerReducer = function(state = initialToogleDrawerState, action) {
 
-  console.debug('drawerReducer');
-  console.debug({ ...state});
-  console.debug({ ...action});
+  //console.debug('drawerReducer');
+  //console.debug({ ...state});
+  //console.debug({ ...action});
 
   switch (action.type) {
 
     case 'TOGGLE_DRAWER' :
 
-      console.debug({ ...state, open: action.toogle });
-      return { ...state, open: action.toogle };
+      //console.debug({ ...state, open: !action.toogle });
+      return { ...state, open: !action.toogle };
 
   }
 

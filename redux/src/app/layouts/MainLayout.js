@@ -11,23 +11,6 @@ import AppBarApp from './AppBarApp';
 
 class MainLayout extends Component {
 
-/*
-  constructor(props) {
-    super(props);
-    this.state = {open: false};
-    this.handleToggle = this.handleToggle.bind(this);
-  };
-  */
-
-  handleToggle = () => this.setState({open: !this.state.open});
-
-/*
-  handleClick = (event, menuItem, index) => {
-      this.handleToggle();
-      browserHistory.push(menuItem.props.path);
-  };
-*/
-
   render() {
     return (
       <div>
