@@ -1,5 +1,5 @@
 import { combineReducers } from 'redux'
-import { TOGGLE_DRAWER } from '../actions/actions-types'
+//import TOGGLE_DRAWER from '../actions/actions-types'
 
 
 const initialToogleDrawerState = {
@@ -8,12 +8,20 @@ const initialToogleDrawerState = {
 
 const drawerReducer = function(state = initialToogleDrawerState, action) {
 
+  console.debug('drawerReducer');
+  console.debug({ ...state});
+  console.debug({ ...action});
+
   switch (action.type) {
 
-    case TOGGLE_DRAWER :
+    case 'TOGGLE_DRAWER' :
+
+      console.debug({ ...state, open: action.toogle });
       return { ...state, open: action.toogle };
 
   }
+
+
   return state;
 }
 

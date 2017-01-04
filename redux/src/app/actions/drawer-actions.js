@@ -1,11 +1,15 @@
-import * as types from './actions-types';
+//import * as types from './actions-types';
 
 export function toogleDrawerAction(toogle) {
 
-  console.debug('toogleDrawerAction(' + toogle + ')');
+//  return {
+//    type: types.TOGGLE_DRAWER,
+//    toogle
+//  };
 
   return {
-    type: types.TOOGLE_DRAWER,
+    type: 'TOGGLE_DRAWER',
     toogle
   };
+
 }

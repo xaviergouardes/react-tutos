@@ -8,4 +8,7 @@ var reducers = combineReducers({
     drawerState: drawerReducer,
 });
 
+console.debug('combineReducers');
+console.debug({...drawerReducer});
+
 export default reducers;

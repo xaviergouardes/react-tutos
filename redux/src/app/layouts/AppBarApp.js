@@ -13,15 +13,18 @@ class AppBarApp extends Component {
   constructor(props) {
     super(props);
     this.handleToggle = this.handleToggle.bind(this);
+    this.state = {flag: true};
   };
 
   //handleToggle = () => this.setState({open: !this.state.open});
   handleToggle = () => {
 
-    console.debug('toogleDrawerAction(true) = ' + toogleDrawerAction('true').toogle );
+    console.debug('AppBar.handleToggle() => ' + this.state.flag);
+    this.setState({flag: !this.state.flag});
+    store.dispatch(toogleDrawerAction(this.state.flag));
 
-    store.dispatch(toogleDrawerAction('true'));
-    console.debug('AppBar.handleToggle()');
+    //console.debug('toogleDrawerAction(true) = ');
+    //console.debug({...toogleDrawerAction(this.state.flag)});
   }
 
 
@@ -38,10 +41,10 @@ class AppBarApp extends Component {
 
 }
 
-const mapStateToProps = function(store) {
-  return {
-    open: store.drawerState.toogle,
-  };
-};
+// https://github.com/reactjs/react-redux/blob/master/docs/api.md#api
+// Inject just dispatch and don't listen to store
+export default connect()(AppBarApp);
 
-export default connect(mapStateToProps)(AppBarApp);
+// https://github.com/reactjs/react-redux/blob/master/docs/api.md#api
+// Inject all action creators (addTodo, completeTodo, ...) without subscribing to the store
+//export default connect(null, toogleDrawerAction)(TodoApp)
