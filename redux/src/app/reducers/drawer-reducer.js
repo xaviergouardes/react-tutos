@@ -3,7 +3,7 @@ import { combineReducers } from 'redux'
 
 
 const initialToogleDrawerState = {
-  open: 'false'
+  open: false
 }
 
 const drawerReducer = function(state = initialToogleDrawerState, action) {
