@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import { browserHistory } from 'react-router';
+import { browserHistory, Link } from 'react-router';
 
 //material-ui
 import Drawer from 'material-ui/Drawer';
@@ -15,23 +15,36 @@ class DrawerApp extends Component {
 
   constructor(props) {
     super(props);
-    this.handleClick = this.handleClick.bind(this);
+    this.handleClickItem = this.handleClickItem.bind(this);
   };
 
-  handleClick = (event, menuItem, index) => {
+  handleClickItem = (event) => {
       store.dispatch(toogleDrawerAction(this.props.open));
-      browserHistory.push(menuItem.props.path);
   };
 
   render() {
     return (
 
-      <Drawer open={this.props.open} openSecondary={true}>
-          <Menu onItemTouchTap={this.handleClick}>
-            <MenuItem path="/" >Home</MenuItem>
-            <MenuItem path="list">Causes List</MenuItem>
-            <MenuItem path="cause">Causes Détail</MenuItem>
-          </Menu>
+      <Drawer open={this.props.open} openSecondary={true} onRequestChange={this.handleClickItem}>
+
+            <MenuItem
+              containerElement={<Link to="/"/>}
+              onTouchTap={this.handleClickItem} >
+                Home
+            </MenuItem>
+
+            <MenuItem
+              containerElement={<Link to="list"/>}
+              onTouchTap={this.handleClickItem} >
+                Causes List
+            </MenuItem>
+
+            <MenuItem
+              containerElement={<Link to="cause" />}
+              onTouchTap={this.handleClickItem} >
+                Causes Détail
+            </MenuItem>
+
       </Drawer>
 
     );
