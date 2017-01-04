@@ -1,11 +1,8 @@
 import { combineReducers } from 'redux'
 //import TOGGLE_DRAWER from '../actions/actions-types'
 
-
-const initialToogleDrawerState = {
-  open: false
-}
-
+// Peremt d'inverser la propriété open
+const initialToogleDrawerState = {open: false}
 const drawerReducer = function(state = initialToogleDrawerState, action) {
 
   //console.debug('drawerReducer');

@@ -11,7 +11,6 @@ import { connect } from 'react-redux';
 import store from '../store.js';
 import { toogleDrawerAction } from '../actions/drawer-actions';
 
-
 class DrawerApp extends Component {
 
   constructor(props) {
@@ -34,6 +33,7 @@ class DrawerApp extends Component {
             <MenuItem path="cause">Causes Détail</MenuItem>
           </Menu>
       </Drawer>
+
     );
   }
 
