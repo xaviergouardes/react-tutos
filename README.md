@@ -22,6 +22,9 @@ Expérimentations avec React
 * https://superdevresources.com/free-material-design-icons/
 * http://lorempixel.com/
 * https://unsplash.it
+> On peut choisir l'image
+* https://placeimg.com/
+* http://loremflickr.com/320/240/dog
 
 ### Material Design
 * https://superdevresources.com/material-design-web-ui-frameworks/
@@ -33,4 +36,7 @@ Expérimentations avec React
 ```
 # Pour lancer le serveur
 npm start
+
+# Pour lancer un script webpack contenu dans le package.json
+npm run build
 ```
