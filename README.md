@@ -1,7 +1,6 @@
 # react-tutos
 Expérimentations avec React
 
-| cf branches, pour le code
 
 # Ressources web
 ## Générales :
@@ -12,12 +11,20 @@ Expérimentations avec React
 
 ## Webpack :
 * https://www.codementor.io/tamizhvendan/tutorials/beginner-guide-setup-reactjs-environment-npm-babel-6-webpack-du107r9zr
-| Tuto react + webpack simple et fonctionnel
+> Tuto react + webpack simple et fonctionnel
 
 ## Avec Yeoman :
 * http://yeoman.io/codelab/
 * https://github.com/react-webpack-generators/generator-react-webpack
 * https://github.com/stylesuxx/generator-react-webpack-redux
+
+### Icones / images
+* https://superdevresources.com/free-material-design-icons/
+* http://lorempixel.com/
+* https://unsplash.it
+
+### Material Design
+* https://superdevresources.com/material-design-web-ui-frameworks/
 
 
 
@@ -26,6 +33,4 @@ Expérimentations avec React
 ```
 # Pour lancer le serveur
 npm start
-
-
 ```
