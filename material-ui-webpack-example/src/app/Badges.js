@@ -1,9 +1,7 @@
 import React from 'react';
 import Avatar from 'material-ui/Avatar';
 import Chip from 'material-ui/Chip';
-import FontIcon from 'material-ui/FontIcon';
-import SvgIconFace from 'material-ui/svg-icons/action/face';
-import {blue300, indigo900} from 'material-ui/styles/colors';
+
 
 const styles = {
   chip: {
@@ -24,13 +22,13 @@ const styles = {
  * Chips with the `onRequestDelete` property defined will display a delete icon.
  */
 export default class ChipExampleSimple extends React.Component {
-render() {
-  return (
-    <div style={styles.wrapper}>
+  render() {
+    return (
+      <div style={styles.wrapper}>
 
 
-      <Chip style={styles.chip} >
-        <Avatar size={16}>A</Avatar>
+        <Chip style={styles.chip} >
+          <Avatar size={16}>A</Avatar>
         Text Avatar Chip
       </Chip>
 
@@ -40,7 +38,7 @@ render() {
           Text Avatar Chip
         </Chip>
 
-    </div>
-);
-}
+      </div>
+    );
+  }
 }

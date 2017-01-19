@@ -1,6 +1,6 @@
 import React from 'react';
 
-import AppBarExampleIcon  from './AppBarExampleIcon';
+import AppBarExampleIcon from './AppBarExampleIcon';
 import CardExampleWithAvatar from './CardExampleWithAvatar';
 import TabsExampleIconText from './TabsExampleIconText';
 
@@ -11,7 +11,7 @@ import TabsExampleIconText from './TabsExampleIconText';
 const MyApp = () => (
   <div>
     <AppBarExampleIcon />
-        <TabsExampleIconText />
+    <TabsExampleIconText />
     <CardExampleWithAvatar />
 
   </div>

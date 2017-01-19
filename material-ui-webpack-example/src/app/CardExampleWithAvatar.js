@@ -1,10 +1,7 @@
 import React from 'react';
-import {Card, CardActions, CardHeader, CardMedia, CardTitle, CardText} from 'material-ui/Card';
+import { Card, CardActions, CardHeader, CardMedia, CardTitle, CardText } from 'material-ui/Card';
 import FlatButton from 'material-ui/FlatButton';
 import Badge from 'material-ui/Badge';
-
-import Chip from 'material-ui/Chip';
-import Avatar from 'material-ui/Avatar';
 
 import Badges from './Badges';
 
@@ -18,15 +15,15 @@ const CardExampleWithAvatar = () => (
     <CardMedia
       overlay={
         <CardTitle title="Overlay title" subtitle="Overlay subtitle">
-        <Badge
-          badgeContent={10}
-          secondary={true}
-        />
-        <Badge
-          badgeContent={40}
-          primary={true}
-        />
-      </CardTitle>
+          <Badge
+            badgeContent={10}
+            secondary
+          />
+          <Badge
+            badgeContent={40}
+            primary
+          />
+        </CardTitle>
       }
     >
       <img src="images/nature-600-337.jpg" />
